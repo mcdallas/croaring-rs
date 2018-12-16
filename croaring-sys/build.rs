@@ -8,6 +8,7 @@ fn main() {
     cc::Build::new()
         .flag("-std=c11")
         .flag("-O3")
+        .flag("-mtune=native")
         .file("CRoaring/roaring.c")
         .compile("libroaring.a");
 
